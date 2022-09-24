@@ -29,8 +29,7 @@ services:
     working_dir: /application
     ports:
       - 4200:4200
-      - 9229:9229
-      - 9221:9221
+      - 9876:9876
       - 3000:3000
     depends_on:
       - mongo

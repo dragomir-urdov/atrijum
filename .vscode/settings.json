@@ -1,7 +1,10 @@
 {
     "files.exclude": {
-        "**/node_modules": true,
-        ".pnpm-store": true
+        "**/.angular": true,
+        "**/.pnpm-store": true,
+        "**/.vscode": true,
+        "**/dist": true,
+        "**/node_modules": true
     },
     "scss.lint.unknownAtRules": "ignore"
 }
