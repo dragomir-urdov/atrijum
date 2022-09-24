@@ -2,8 +2,6 @@
 
 set -e
 
-echo "Hello World"
-
 pnpm install
 
 pnpm --filter "@atrijum/atelje-client" run start &
