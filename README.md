@@ -1,15 +1,12 @@
 # Atrijum Atelje
 
-  <div align="center" style="display: flex">
-    <p>
-      <a href="http://angular.io/" target="blank">
-        <img src="https://angular.io/assets/images/logos/angular/angular.svg" width="200" alt="Nest Logo" />
-      </a>
-    </p>
-    <p>
-      <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-    </p>
-  </div>
+<a href="http://angular.io/" target="blank">
+  <img src="https://angular.io/assets/images/logos/angular/angular.svg" width="300" alt="Angular Logo"/>
+</a>
+
+<a href="http://nestjs.com/" target="blank">
+  <img src="https://nestjs.com/img/logo-small.svg" width="300" alt="Nest Logo"/>
+</a>
 
 - [Installation](#installation)
 - [Usage](#usage)
