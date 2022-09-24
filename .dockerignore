@@ -1,0 +1,13 @@
+.dockerignore
+.gitignore
+
+.vscode
+
+script
+
+Dockerfile
+
+docker-compose.yaml
+docker-compose.build.yaml
+
+README.md
