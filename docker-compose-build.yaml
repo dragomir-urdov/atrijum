@@ -1,0 +1,18 @@
+version: "3.8"
+
+x-node-image-version: &node-image-version "node:16-alpine"
+
+x-build-args: &build-args
+  NODE_IMAGE: *node-image-version
+
+x-build-config: &build-config
+  context: .
+  target: app
+  args:
+    <<: *build-args
+
+services:
+  atelje:
+    build:
+      <<: *build-config
+      dockerfile: services/atelje/Dockerfile

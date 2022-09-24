@@ -1,0 +1,40 @@
+version: '3.8'
+
+x-images: &node-image
+  build:
+    context: .
+    dockerfile: Dockerfile
+    args:
+      - NODE_IMAGE=node:16-alpine
+  user: node
+  working_dir: /application
+
+services:
+  mongo:
+    image: mongo:6
+    ports:
+      - 27017:27017
+    env_file:
+      - .env/mongodb.development.env 
+    volumes:
+      - atrijum-data:/data/db:cached # mongo-storage
+  atelje:
+    <<: *node-image
+    user: node
+    volumes:
+      - .:/application:cached
+      - ./script/dev/atelje-entrypoint.sh:/home/node/atelje-entrypoint.sh
+    env_file:
+      - .env/atelje.development.env
+    working_dir: /application
+    ports:
+      - 4200:4200
+      - 9229:9229
+      - 9221:9221
+      - 3000:3000
+    depends_on:
+      - mongo
+    command: "/home/node/atelje-entrypoint.sh"
+
+volumes:
+  atrijum-data:
