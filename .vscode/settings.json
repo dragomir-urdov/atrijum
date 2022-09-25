@@ -6,5 +6,9 @@
         "**/dist": true,
         "**/node_modules": true
     },
-    "scss.lint.unknownAtRules": "ignore"
+    "scss.lint.unknownAtRules": "ignore",
+    "search.exclude": {
+        "**/.pnpm-store": true,
+        "**/dist": true
+    }
 }
