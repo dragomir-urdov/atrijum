@@ -6,11 +6,8 @@ import { UserService } from './user.service';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([
-      {
-        name: User.name,
-        schema: UserSchema,
-      },
+    MongooseModule.forFeatureAsync([
+      { name: User.name, useFactory: UserSchema },
     ]),
   ],
   controllers: [UserController],

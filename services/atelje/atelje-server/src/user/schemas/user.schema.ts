@@ -6,10 +6,21 @@ export type UserDocument = User & Document;
 @Schema()
 export class User {
   @Prop()
-  name: string;
+  email: string;
 
-  @Prop()
-  age: number;
+  @Prop({
+    unique: true,
+    required: true,
+  })
+  username: string;
 }
 
-export const UserSchema = SchemaFactory.createForClass(User);
+export const UserSchema = () => {
+  const userSchema = SchemaFactory.createForClass(User);
+
+  userSchema.pre('save', () => {
+    console.log('User Schema => Pre Save');
+  });
+
+  return userSchema;
+};

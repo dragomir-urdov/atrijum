@@ -10,5 +10,6 @@
     "search.exclude": {
         "**/.pnpm-store": true,
         "**/dist": true
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

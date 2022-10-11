@@ -1,11 +1,11 @@
 import { ErrorHandler, Injectable, Injector } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CoreErrorHandler implements ErrorHandler {
+export class AppErrorHandler implements ErrorHandler {
   constructor(private injector: Injector) {}
 
   handleError(error: unknown): Observable<unknown> {

@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class CoreHttpInterceptor implements HttpInterceptor {
+export class AppHttpInterceptor implements HttpInterceptor {
   intercept(
     req: HttpRequest<unknown>,
     next: HttpHandler
